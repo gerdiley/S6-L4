@@ -1,0 +1,23 @@
+@mixin reset {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin fonts {
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+}
+
+@mixin headerStyle ($style, $display, $padding) {
+    list-style-type: none;
+    text-decoration: none;
+    font-style: $style;
+    display: $display;
+    padding: $padding;
+}
+
+@mixin border {
+    box-shadow: 3px 3px 3px map-get($colori, 'arancio');
+    border-radius: 5px;
+    margin: 6px;
+}

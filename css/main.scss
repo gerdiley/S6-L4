@@ -1,0 +1,108 @@
+@import 'variables';
+@import 'mixins';
+@import 'function';
+@include fonts;
+
+
+* {
+    @include reset;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2{
+ font-weight: lighter;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    left: 1%;
+    width: 98%;
+    background-color: map-get($colori, 'blu');
+    @include border;
+ 
+    ul{
+        @include headerStyle(italic, flex, 5px);
+        li{
+            @include  headerStyle(italic, flex, 10px);
+            a{
+                color: map-get($colori, 'bianco');
+                @include  headerStyle(italic, flex, 0px);
+            }
+        }
+    }
+
+   
+}
+
+#main{
+    display: flex;
+    max-width: 65vw;
+    margin: 0 auto;
+    justify-content: space-between;
+    a{
+        @include headerStyle(italic, inline, 0);
+        color: map-get($colori, 'arancio');
+    }
+    article{
+        width: 70%;
+        h1{
+            line-height: 2em;
+        }
+        h2{
+            line-height: 2em;
+        }
+        button{
+            background-color: map-get($colori, 'arancio');
+            padding: 8px;
+            margin: 8px 3px;
+            border: 2px outset white;
+            color: white;
+        }
+    }
+
+    aside {
+        li{
+           text-decoration: none;
+           list-style-type: none;
+           padding: 1em;
+           border-bottom: 1px dashed gray;
+           width: 180px;
+        }
+        li:hover{
+            background-color: map-get($colori, 'grigio');
+        }
+    }
+}
+
+form{
+    margin-top: 10px;
+    fieldset{
+        padding: 10px;
+        input{
+            margin: 3px 0;
+        }
+    }
+}
+
+blockquote{
+    padding-left: 2.5rem;
+    margin-top: 1rem;
+    cite{
+        line-height: 2.5rem;
+    }
+}
+
+
+#footer{
+    background-color: map-get($colori, 'celeste');
+    height: 150px;
+    margin-top: 40px;
+}
+
+
+
+
